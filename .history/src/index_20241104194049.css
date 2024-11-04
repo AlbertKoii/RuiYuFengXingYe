@@ -1,0 +1,134 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* For Layout Home 中Pictures Slider 使用 */
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  z-index: 10;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.relative {
+  position: relative;
+}
+
+.gallery {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ul {
+  list-style: none; /* 隐藏列表项中的圆点 */
+  padding: 0; /* 去除默认的内边距 */
+  margin: 0; /* 去除默认的外边距 */
+}
+
+ul li {
+  display: inline-block; /* 将列表项显示为内联块级元素 */
+  margin-right: 20px; /* 添加右边距 */
+}
+h1, h2, h3 ,h4 ,h5 ,h6 {
+  font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+nav {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(256,256,256,0.2);
+  padding: 1rem;
+  z-index: 50; /* 确保导航栏在最上层 */
+}
+
+@layer base {
+  :root {
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(222.2, 47.4%, 11.2%);
+    --muted: hsl(210, 40%, 96.1%);
+    --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+    --popover: hsl(0, 0%, 100%);
+    --popover-foreground: hsl(222.2, 47.4%, 11.2%);
+    --border: hsl(214.3, 31.8%, 91.4%);
+    --input: hsl(214.3, 31.8%, 91.4%);
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(222.2, 47.4%, 11.2%);
+    --primary: hsl(222.2, 47.4%, 11.2%);
+    --primary-foreground: hsl(210, 40%, 98%);
+    --secondary: hsl(210, 40%, 96.1%);
+    --secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+    --accent: hsl(210, 40%, 96.1%);
+    --accent-foreground: hsl(222.2, 47.4%, 11.2%);
+    --destructive: hsl(0, 100%, 50%);
+    --destructive-foreground: hsl(210, 40%, 98%);
+    --ring: hsl(215, 20.2%, 65.1%);
+    --radius: 0.5rem;
+  }
+
+ .dark {
+    --background: hsl(224, 71%, 4%);
+    --foreground: hsl(213, 31%, 91%);
+    --muted: hsl(223, 47%, 11%);
+    --muted-foreground: hsl(215.4, 16.3%, 56.9%);
+    --accent: hsl(216, 34%, 17%);
+    --accent-foreground: hsl(210, 40%, 98%);
+    --popover: hsl(224, 71%, 4%);
+    --popover-foreground: hsl(215, 20.2%, 65.1%);
+    --border: hsl(216, 34%, 17%);
+    --input: hsl(216, 34%, 17%);
+    --card: hsl(224, 71%, 4%);
+    --card-foreground: hsl(213, 31%, 91%);
+    --primary: hsl(210, 40%, 98%);
+    --primary-foreground: hsl(222.2, 47.4%, 1.2%);
+    --secondary: hsl(222.2, 47.4%, 11.2%);
+    --secondary-foreground: hsl(210, 40%, 98%);
+    --destructive: hsl(0, 63%, 31%);
+    --destructive-foreground: hsl(210, 40%, 98%);
+    --ring: hsl(216, 34%, 17%);
+    --radius: 0.5rem;
+  }
+
+  @layer base {
+    * {
+      @apply border-solid border-gray-300;;
+    }
+
+    body {
+      @apply bg-gray-100 text-gray-900; /* 使用有效的背景颜色和文本颜色类 */
+      font-feature-settings: "rlig" 1, "calt" 1;
+    }
+  }
+};
