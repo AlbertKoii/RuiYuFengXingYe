@@ -1,0 +1,21 @@
+{
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true, // 添加或修改这一行
+    "outDir": "dist"
+  }
+}

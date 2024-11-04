@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true, // 添加或修改这一行
+    "outDir": "dist"
+  }
+}
