@@ -1,8 +1,11 @@
 import { useRoutes, Navigate, Link, Routes, Route } from "react-router-dom"
 import React, { lazy, ReactElement, Suspense } from "react"
 import { FaSquareFacebook } from "react-icons/fa6";
-import Appointment from "@/pages/Home/Appointment";
+import Appointment from "@/pages/Nav/Appointment";
 import { FaHome } from "react-icons/fa";
+import { Footer } from "react-day-picker";
+import FooterPage from "./pages/FooterPage/index";
+
 
 
 const Home = lazy(() => import('@/pages/Home/Index'));
@@ -25,7 +28,7 @@ function RouterMap() {
             </li>
             {/* 做預約功能連結 */}
             <li className=" content-center ml-4"><Link to="/">
-            <Appointment/>
+            {/* <Appointment/> */}
             </Link></li>
             {/* 預留會員註冊與登錄 */}
             {/* <li><Link to="/Login"><LoginIcon/></Link></li> */}
@@ -36,6 +39,9 @@ function RouterMap() {
             <Route path="/" element={<Home />} />
           </Routes>
         </Suspense>
+        <footer>
+          <FooterPage/>
+        </footer>
       </div>
     );
   }
