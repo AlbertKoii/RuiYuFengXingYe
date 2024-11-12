@@ -1,0 +1,15 @@
+.gallery img {
+    width: 100rem;
+    height: 80rem;
+    object-fit: cover;
+  }
+
+  .svg-container {
+    width: 20rem; /* 使用 rem 单位设置宽度 */
+    height: 20rem; /* 使用 rem 单位设置高度 */
+  }
+  
+  .svg-container svg {
+    width: 100%; 
+    height: 100%; 
+  }

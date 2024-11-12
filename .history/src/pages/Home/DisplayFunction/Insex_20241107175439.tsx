@@ -1,0 +1,65 @@
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
+
+interface Photo {
+    id: string;
+    urls: {
+      regular: string;
+    };
+  }
+
+const DisplayFunction: React.FC = () =>{
+    const [photos, setPhotos] = useState<Photo[]>([]);
+    const [error, setError] = useState<string | null>(null);
+    const searchQuery = 'laptop';
+    
+
+    useEffect(() => {
+        const fetchPhotos = async () => {
+          try {
+            const response = await axios.get<Photo[]>(
+              'https://api.unsplash.com/search/photos',
+              {
+                params: {
+                  client_id: 'm9PWKb7gMe3jBdFxodl-482pnXqPftUPHVsrc4syM_0',
+                  query: searchQuery,
+                  per_page: 10,
+                  page: 1,
+                  order_by: 'relevant'
+                }
+              }
+            );
+            setPhotos(response.data);
+          } catch (error) {
+            if (axios.isAxiosError(error)) {
+              setError(error.message);
+            } else {
+              setError('錯誤資料');
+            }
+          }
+        };
+        fetchPhotos();
+      }, []);
+    
+    return(
+        <div>
+            <div className="grid grid-cols-1">
+                <div className="grid grid-cols-4 ">
+                    {photos.map((photo) => (
+                    <div 
+                    key={photo.urls.regular}>
+                        <img 
+                        className=" object-cover w-30 h-30 "
+                        src={photo.urls.regular} alt={photo.id} />
+                    </div>
+                    ))}
+                </div>
+                {error && <div>錯誤：{error}</div>}
+            </div>
+        </div>
+    )
+
+    
+}
+
+export default DisplayFunction;
