@@ -20,8 +20,8 @@ export default tseslint.config(
       'react-refresh': reactRefresh,
     },
     rules: {
-      ...React.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
+      
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
