@@ -5,11 +5,22 @@ import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
   plugins: [react() , svgr()],
-  base: "/RuiYuFengXingYe/",
   server: {
     host: '0.0.0.0', // 允许局域网访问
-    port: 5000 ,
-},
+    port: 5000,
+    middleware: [
+      {
+        handle: (req, res, next) => {
+          if (req.url.endsWith('.js')) {
+            res.setHeader('Content-Type', 'application/javascript');
+          } else if (req.url.endsWith('.css')) {
+            res.setHeader('Content-Type', 'text/css');
+          }
+          next();
+        },
+      },
+    ],
+  },
 
   resolve: {
     alias: {
