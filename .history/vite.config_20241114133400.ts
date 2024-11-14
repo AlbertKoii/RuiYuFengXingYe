@@ -3,8 +3,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 
-export default defineConfig(({ mode }) => {
-  const repoName = 'RuiYuFengXingYe';
+export default defineConfig(({ command, mode }) => {
+  const repoName = '';
   const base = mode === 'production'? `/${repoName}/` : '/';
 
   return {
