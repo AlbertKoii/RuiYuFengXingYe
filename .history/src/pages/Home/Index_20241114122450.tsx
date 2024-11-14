@@ -10,6 +10,9 @@ import AirConditionalType from './AirConditionalType'
 import UserFeedBack from './UserFeedBack';
 
 
+const ImageComponent = () => {
+  const baseUrl = process.env.NODE_ENV === 'production'? '/RuiYuFengXingYe/' : '/';
+
 interface HomeProps {
 }
 

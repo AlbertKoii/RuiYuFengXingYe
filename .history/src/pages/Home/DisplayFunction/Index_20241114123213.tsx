@@ -35,7 +35,7 @@ const DisplayFunction: React.FC = () =>{
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <img src={`${__BASE_URL__}img/DisplayFunction004.png`} alt="First Pics"/>
+            <img src={`${__BASE_URL__}img/DisplayFunction004.img`} alt="First Pics"/>
             <div className="px-10">
               <p>
               空調如果運行了較長時間，空調的濾網以及銅片內部會擠壓一定的灰塵，熱交換器翅片間也會積滿灰塵，，隨著空調開啟，空調出風異味與菸味就會飄散到空氣中.

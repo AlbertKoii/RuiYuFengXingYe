@@ -10,12 +10,15 @@ import AirConditionalType from './AirConditionalType'
 import UserFeedBack from './UserFeedBack';
 
 
+
+
 interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = () => {
 
-  
+  const ImageComponent = () => {
+    const baseUrl = process.env.NODE_ENV === 'production'? '/RuiYuFengXingYe/' : '/';
 
   return (
     <div className="w-screen h-fit relative">
