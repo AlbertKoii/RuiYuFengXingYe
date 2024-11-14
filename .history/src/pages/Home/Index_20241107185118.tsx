@@ -10,12 +10,12 @@ import AirConditionalType from './AirConditionalType'
 import UserFeedBack from './UserFeedBack';
 
 
+
+
 interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = () => {
-
-  
 
   return (
     <div className="w-screen h-fit relative">
