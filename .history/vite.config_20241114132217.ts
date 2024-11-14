@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 
 export default defineConfig(({ command, mode }) => {
-  const repoName = 'https://AlbertKoii.github.io/RuiYuFengXingYe/';
+  const repoName = 'https://saram7619.github.io/RuiYuFengXingYe/';
   const base = mode === 'production'? `/${repoName}/` : '/';
 
   return {
