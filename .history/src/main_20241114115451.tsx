@@ -6,7 +6,7 @@ import RouterMap  from './index';
 
 
 
-const basename = process.env.NODE_ENV === 'production'? '/<REPO>/' : '/';
+const basename = process.env.NODE_ENV === 'production'? '/RuiYuFengXingYe/' : '/';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

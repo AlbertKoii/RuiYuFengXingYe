@@ -6,9 +6,6 @@ import { FaHome } from "react-icons/fa";
 import FooterPage from "./pages/FooterPage/index";
 import './index.css'
 
-
-const Home = lazy(() => import('@/pages/Home/Index'));
-
 function RouterMap() {
   return (
     <div className="App h-screen">
