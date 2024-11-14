@@ -5,6 +5,11 @@ import './index.css';
 import RouterMap  from './index';
 
 
+// Store of Appoinment
+// interface Appoinment {
+//   value : 
+  
+// }
 
 const basename = process.env.NODE_ENV === 'production'? '/<REPO>/' : '/';
 
@@ -13,7 +18,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={basename}>
+    <BrowserRouter>
       <RouterMap />
     </BrowserRouter>
   </React.StrictMode>

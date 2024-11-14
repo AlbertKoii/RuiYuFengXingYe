@@ -5,7 +5,7 @@ import Appointment from "@/pages/Nav/Appointment";
 import { FaHome } from "react-icons/fa";
 import FooterPage from "./pages/FooterPage/index";
 import './index.css'
-
+import Home from "./pages/Home"
 
 const Home = lazy(() => import('@/pages/Home/Index'));
 
@@ -36,13 +36,13 @@ function RouterMap() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* 添加一个捕获所有路由的404错误页面 */}
           <Route path="*" element={<div>404 - 页面未找到</div>} />
         </Routes>
       </Suspense>
       <footer>
         <FooterPage/>
       </footer>
-      <div>当前路径：{window.location.pathname}</div>
     </div>
   );
 }
