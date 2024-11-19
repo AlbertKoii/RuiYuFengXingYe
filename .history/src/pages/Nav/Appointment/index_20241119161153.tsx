@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from "../../../components/ui/button";
-import AppointmentModal from "../../../components/ui/common/AppointmentModal";
+import AppointmentModal from "@../../../components/ui/common/AppointmentModal";
 
 const Appointment = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

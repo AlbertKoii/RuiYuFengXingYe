@@ -23,8 +23,7 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-
+        "@": path.resolve(__dirname, "./src" , "import.meta.url"),
       },
       extensions:[
           '.js',
