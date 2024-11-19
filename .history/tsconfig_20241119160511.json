@@ -3,18 +3,17 @@
   "compilerOptions": {
     "jsx": "react",
     "baseUrl": ".",
-    "lib": ["DOM", "es6"],
-    "types": ["vite-plugin-svgr/client" , "vite/client"],
-    "moduleResolution": "node",
+    "types": ["vite-plugin-svgr/client"],
     "paths": {
       "@/*": ["./src/*"]
     },
     "target": "es6",
-    "module": "es6",
+    "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "outDir": "dist"
   },
   "include": ["src/vite-env.d.ts","src/**/*.ts"],
-  "exclude": [ "node_modules", "**/*.spec.ts"]
+  "exclude": [ "node_modules", // 排除 node_modules 目录
+    "**/*.spec.ts" // 可选：排除测试文件]
 }

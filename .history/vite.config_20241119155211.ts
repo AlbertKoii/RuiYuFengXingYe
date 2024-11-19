@@ -3,18 +3,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 
-import { fileURLToPath, URL } from 'node:url'
-
-
-
-
 export default defineConfig(({ mode }) => {
   const repoName = 'RuiYuFengXingYe';
   const base = mode === 'production'? `/${repoName}/` : '/';
 
   return {
     plugins: [react(), svgr()],
-    base,
+    // base,
     server: {
       host: '0.0.0.0', // 允许局域网访问
       port: 3001,
@@ -23,8 +18,7 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-
+        "@": path.resolve(__dirname, "./src" , "import.meta.url"),
       },
       extensions:[
           '.js',

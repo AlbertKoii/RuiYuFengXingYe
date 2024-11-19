@@ -3,9 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 
-import { fileURLToPath, URL } from 'node:url'
-
-
+import vuetify from 'vite-plugin-vuetify'
 
 
 export default defineConfig(({ mode }) => {
@@ -23,8 +21,7 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-
+        "@": path.resolve(__dirname, "./src" , "import.meta.url"),
       },
       extensions:[
           '.js',
