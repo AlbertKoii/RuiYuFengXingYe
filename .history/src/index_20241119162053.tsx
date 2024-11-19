@@ -10,7 +10,7 @@ import { basename } from "path";
 import { useDispatch } from 'react-redux'; // 導入useDispatch
 
 
-const Home = lazy(() => import('./pages/Home/Index'));
+const Home = lazy(() => import('../pages/Home/Index'));
 
 function RouterMap(basename:any) {
   
