@@ -36,7 +36,7 @@ export default defineConfig(({ mode }) => {
           '.mjs',
           '.ts',
           '.tsx',
-          '.css'
+          ''
       ]
     },
     build: {
