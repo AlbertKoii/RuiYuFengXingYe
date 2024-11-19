@@ -16,9 +16,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Router basename={basename} >
+    <router basename={basename} >
       <RouterMap store= {store}/>
-    </Router>
+    </router>
   </React.StrictMode>
 );
 

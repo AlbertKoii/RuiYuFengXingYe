@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter as Router } from "react-router-dom"
+import { HashRouter as  } from "react-router-dom"
 import './index.css';
 import RouterMap  from './index';
 import { Provider } from 'react-redux';
@@ -16,9 +16,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Router basename={basename} >
+    <HashRouter basename={basename} >
       <RouterMap store= {store}/>
-    </Router>
+    </HashRouter>
   </React.StrictMode>
 );
 
