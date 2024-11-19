@@ -16,7 +16,6 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(), 
       svgr()],
-      
     base : "./",
     server: {
       host: '0.0.0.0', // 允许局域网访问
@@ -41,6 +40,8 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
     },
-    define: { 'process.env': {} },
+    define: {
+      __BASE_URL__: JSON.stringify(base),
+    },
   };
 });

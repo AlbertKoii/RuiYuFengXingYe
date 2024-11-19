@@ -41,6 +41,8 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
     },
-    define: { 'process.env': {} },
+    define: {
+      __BASE_URL__: JSON.stringify(base),
+    },
   };
 });
