@@ -17,8 +17,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <HashRouter basename={basename}>
-      <RouterMap store= {store}/>
-      </HashRouter>
+      <Routes>
+        <Route></Route>
+        <RouterMap store= {store}/>
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
 
