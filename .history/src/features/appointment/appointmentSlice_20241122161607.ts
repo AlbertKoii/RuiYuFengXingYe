@@ -5,9 +5,9 @@ interface AppointmentState {
     name: string | null;
     phone: number | null;
     area: string | null;
-    appointmentDate: any | null; 
-    error: string | null; 
-    loading: boolean; 
+    appointmentDate: any | null; // 可以根据具体情况替换为更合适的类型
+    error: string | null; // 错误信息应该是字符串
+    loading: boolean; // 添加 loading 状态以表示请求状态
 }
 
 const initialState: AppointmentState = {
@@ -16,10 +16,10 @@ const initialState: AppointmentState = {
     area: null,
     appointmentDate: null,
     error: null,
-    loading: false, 
+    loading: false, // 初始化 loading 状态
 };
 
-
+// POST 请求的异步 thunk
 export const appointmentUser = createAsyncThunk(
     'appointment/create',
     async (appointmentData: { 
@@ -65,7 +65,7 @@ const appointmentSlice = createSlice({
             state.phone = null;
             state.area = null;
             state.appointmentDate = null;
-            state.error = null; 
+            state.error = null; // 清除错误信息
         },
     },
     extraReducers: (builder) => {
@@ -86,19 +86,19 @@ const appointmentSlice = createSlice({
                 state.error = action.payload;
             })
             .addCase(fetchUser.pending, (state) => {
-                state.loading = true; 
-                state.error = null; 
+                state.loading = true; // 请求开始时设置 loading 为 true
+                state.error = null; // 清除之前的错误信息
             })
             .addCase(fetchUser.fulfilled, (state, action) => {
-                state.loading = false; 
-                state.name = action.payload.name; 
-                state.phone = action.payload.phone; 
-                state.area = action.payload.area; 
-                state.appointmentDate = action.payload.appointmentDate; 
+                state.loading = false; // 请求完成后设置 loading 为 false
+                state.name = action.payload.name; // 设置用户名
+                state.phone = action.payload.phone; // 设置电话号码
+                state.area = action.payload.area; // 设置区域
+                state.appointmentDate = action.payload.appointmentDate; // 设置预约日期
             })
             .addCase(fetchUser.rejected, (state, action) => {
-                state.loading = false; 
-                state.error = action.payload; 
+                state.loading = false; // 请求完成后设置 loading 为 false
+                state.error = action.payload; // 设置错误信息
             });
     },
 });

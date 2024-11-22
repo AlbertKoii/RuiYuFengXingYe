@@ -5,9 +5,9 @@ interface AppointmentState {
     name: string | null;
     phone: number | null;
     area: string | null;
-    appointmentDate: any | null; 
-    error: string | null; 
-    loading: boolean; 
+    appointmentDate: any | null; // 可以根据具体情况替换为更合适的类型
+    error: string | null; // 错误信息应该是字符串
+    loading: boolean; // 添加 loading 状态以表示请求状态
 }
 
 const initialState: AppointmentState = {
@@ -65,7 +65,7 @@ const appointmentSlice = createSlice({
             state.phone = null;
             state.area = null;
             state.appointmentDate = null;
-            state.error = null; 
+            state.error = null; // 清除错误信息
         },
     },
     extraReducers: (builder) => {
