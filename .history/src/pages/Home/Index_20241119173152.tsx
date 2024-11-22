@@ -22,7 +22,7 @@ const Home: React.FC<HomeProps> = () => {
     <div className="w-screen h-fit relative">
       <Helmet>
                 <title>冷氣維修、冷氣安裝</title>
-                <meta name="冷氣" content= "冷氣安裝維護工程" />
+                <meta name="description" content= "冷氣安裝維護工程" />
       </Helmet>
       <ImageSlider/>
       <UpperInfo/>
