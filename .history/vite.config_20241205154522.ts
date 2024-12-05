@@ -12,15 +12,23 @@ export default defineConfig(({ mode }) => {
   // const repoName = 'RuiYuFengXingYe';
   // const base = mode === 'production'? `/${repoName}/` : '/';
 
-  
   return {
-    base : "/RuiYuFengXingYe/",
+
+    server: :{
+      middlewareMode: true,
+    }
+
     plugins: [
       react(), 
       svgr()],
-
-    server:{
-      middlewareMode: true
+      
+      
+    base : "/RuiYuFengXingYe/",
+    server: {
+      host: '0.0.0.0', // 允许局域网访问
+      port: 3001,
+      open: true,
+      cors: true,
     },
     resolve: {
       alias: {
