@@ -38,7 +38,9 @@ const AirConditionalType : React.FC<AirConditionalTypeProps> = () =>{
                     <CarouselItem className="basis-1/3 xs:basic-1/1 sm:basic-1/1 lg:basic-1/3 xl:basic-1/3">
                     <img src="https://www.maintenance-service.com.tw/images/home-3-223x227.jpg" alt="吊隱式冷氣保養"/>
                     吊隱式冷氣保養
-                    </CarouselItem>    
+                    </CarouselItem>
+
+                    
                 </CarouselContent>
                 <CarouselPrevious />
                 <CarouselNext />

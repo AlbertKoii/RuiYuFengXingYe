@@ -33,8 +33,8 @@ const UpperInfo = () => {
         <div className="flex items-center justify-center">
           <AiFillPhone className="text-4xl cursor-pointer mr-2" />
           <div>
-            <div className="text-2xl">聯絡資訊:</div>
-            <div className='text-xl'>0938-099-062</div>
+            <div className="text-base">聯絡資訊:</div>
+            <div>0938-099-062</div>
           </div>
         </div>
       </div>
