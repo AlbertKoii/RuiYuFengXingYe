@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
 
   
   return {
-    base : "/RuiYuFengXingYe/",
+
     plugins: [
       react(), 
       svgr()],
@@ -22,6 +22,10 @@ export default defineConfig(({ mode }) => {
     server:{
       middlewareMode: true
     },
+      
+      
+    base : "/RuiYuFengXingYe/",
+    
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url))

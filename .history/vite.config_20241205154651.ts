@@ -14,13 +14,20 @@ export default defineConfig(({ mode }) => {
 
   
   return {
-    base : "/RuiYuFengXingYe/",
+
     plugins: [
       react(), 
       svgr()],
 
-    server:{
-      middlewareMode: true
+    server
+      
+      
+    base : "/RuiYuFengXingYe/",
+    server: {
+      host: '0.0.0.0', // 允许局域网访问
+      port: 3001,
+      open: true,
+      cors: true,
     },
     resolve: {
       alias: {
