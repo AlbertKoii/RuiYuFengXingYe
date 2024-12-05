@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
       react(), 
       svgr()],
       
-    base : "/RuiYuFengXingYe/",
+    base : "//",
     server: {
       host: '0.0.0.0', // 允许局域网访问
       port: 3001,
@@ -41,10 +41,6 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       outDir: 'dist',
-      rollupOptions:{
-        input:"/index.html",
-      }
-      ,
     },
     define: { 'process.env': {} },
   };

@@ -34,7 +34,7 @@ const UpperInfo = () => {
           <AiFillPhone className="text-4xl cursor-pointer mr-2" />
           <div>
             <div className="text-2xl">聯絡資訊:</div>
-            <div className='text-xl'>0938-099-062</div>
+            <div className='text-M'>0938-099-062</div>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const AirConditionalType : React.FC<AirConditionalTypeProps> = () =>{
 
     return(
         <div className="w-screen relative">
-            <h1 className="mb-10 justify-center">冷氣保養</h1>
+            <h1 className="mb-10 j">冷氣保養</h1>
             <Carousel>
                 <CarouselContent className="h-96 px-24 py-10 xs:basic-1/1 sm:basic-1 lg:basic-1/3 xl:basic-1/3">
                     <CarouselItem className="basis-1/3 xs:basic-1/1 sm:basic-1/1 lg:basic-1/3 xl:basic-1/3">
@@ -38,7 +38,9 @@ const AirConditionalType : React.FC<AirConditionalTypeProps> = () =>{
                     <CarouselItem className="basis-1/3 xs:basic-1/1 sm:basic-1/1 lg:basic-1/3 xl:basic-1/3">
                     <img src="https://www.maintenance-service.com.tw/images/home-3-223x227.jpg" alt="吊隱式冷氣保養"/>
                     吊隱式冷氣保養
-                    </CarouselItem>    
+                    </CarouselItem>
+
+                    
                 </CarouselContent>
                 <CarouselPrevious />
                 <CarouselNext />

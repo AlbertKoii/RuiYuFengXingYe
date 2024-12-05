@@ -6,7 +6,8 @@ import { FaHome } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import FooterPage from "./pages/FooterPage/index";
 import './index.css'
-
+import { basename } from "path";
+import { useDispatch } from 'react-redux'; 
 
 
 const Home = lazy(() => import('./pages/Home/Index'));

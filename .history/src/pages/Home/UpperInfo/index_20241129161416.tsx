@@ -23,9 +23,9 @@ const UpperInfo = () => {
         <div className="flex items-center justify-center">
           <AiFillSetting className="text-4xl cursor-pointer mr-2" />
           <div>
-            <div className="text-2xl">服務時間:</div>
-            <div className="text-xl">星期一~星期六: 8:00 ~ 20:00</div>
-            <div className="text-xl">星期天、國定假日公休:</div>
+            <div className="text-">服務時間:</div>
+            <div className="text-base">星期一~星期六: 8:00 ~ 20:00</div>
+            <div className="text-base">星期天、國定假日公休:</div>
           </div>
         </div>
       </div>
@@ -33,8 +33,8 @@ const UpperInfo = () => {
         <div className="flex items-center justify-center">
           <AiFillPhone className="text-4xl cursor-pointer mr-2" />
           <div>
-            <div className="text-2xl">聯絡資訊:</div>
-            <div className='text-xl'>0938-099-062</div>
+            <div className="text-base">聯絡資訊:</div>
+            <div>0938-099-062</div>
           </div>
         </div>
       </div>

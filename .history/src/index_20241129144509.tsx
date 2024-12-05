@@ -6,7 +6,8 @@ import { FaHome } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import FooterPage from "./pages/FooterPage/index";
 import './index.css'
-
+import { basename } from "path";
+import { useDispatch } from 'react-redux'; 
 
 
 const Home = lazy(() => import('./pages/Home/Index'));
@@ -33,11 +34,11 @@ function RouterMap(basename:any) {
             </Link>
           </li>
           <li className="content-center ml-4">
-            <Link to="https://www.instagram.com/rayfeng_ltd_1101/?igsh=MTQ3dDhxZG5vdnlmMQ%3D%3D">
-            <GrInstagram 
-            size={30} 
-            color="#e8e8fa"/>
-            </Link>
+          <Link to="https://www.facebook.com/profile.php?id=61568158496454">
+          <GrInstagram 
+          size={30} 
+          color="#e8e8fa"/>
+          <></>
           </li>
           {/* 做預約功能連結 */}
           <li className=" content-center ml-4"><Link to="/">
